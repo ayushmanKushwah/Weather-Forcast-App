@@ -1,0 +1,184 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background-color: #3e3e5e;
+  min-height: 70vh;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to bottom, #87ceeb 0%, #ffffff 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* padding-bottom: 10vh; */
+}
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-width: 40vw;
+}
+
+.weather-card {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 25px;
+  padding: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 30vw;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #ffa500;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff8c00;
+}
+
+.weather-info {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.weather-info img {
+  width: 70px;
+  animation: zoomIn 0.6s ease-in-out;
+}
+body.dark-mode {
+  background: linear-gradient(to bottom, #1e1e2f 0%, #2c2c54 100%);
+  color: white;
+}
+
+body.dark-mode .weather-card {
+  background: rgba(30, 30, 48, 0.85);
+  color: white;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode input {
+  background-color: #3e3e5e;
+  color: white;
+}
+
+body.dark-mode button {
+  background-color: #6c63ff;
+}
+
+body.dark-mode button:hover {
+  background-color: #5a54e9;
+}
+.aqi-card {
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  color: #fff;
+}
+
+.aqi-good {
+  background-color: #a8e05f;
+}
+.aqi-moderate {
+  background-color: #fdd64b;
+}
+.aqi-unhealthy {
+  background-color: #ff9b57;
+}
+.aqi-bad {
+  background-color: #fe6a69;
+}
+.aqi-hazardous {
+  background-color: #a97abc;
+}
+
+body.dark-mode .aqi-card {
+  color: #fff;
+}
+.horizontal-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  overflow-x: auto; /* horizontal scroll if needed */
+}
+
+#aqiCard {
+  flex: 0 0 30%;
+  min-width: 220px;
+}
+
+.forecast {
+  flex: 1 1 65%;
+  min-width: 400px;
+}
+
+.forecast-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.forecast-day {
+  flex: 1 1 30%;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  min-width: 90px;
+}
+
+/* Dark mode adjustments */
+body.dark-mode #aqiCard {
+  background: rgba(60, 60, 90, 0.85);
+  color: white;
+}
+
+body.dark-mode .forecast-day {
+  background: rgba(60, 60, 90, 0.85);
+  color: white;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+body.dark-mode{
+  background: linear-gradient(to bottom, #2c2c54 0%, #1e1e2f 100%);
+}
